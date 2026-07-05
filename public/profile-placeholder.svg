@@ -1,0 +1,6 @@
+<svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="600" rx="80" fill="#020617"/>
+  <circle cx="300" cy="250" r="120" fill="#0F172A" stroke="#06B6D4" stroke-width="8"/>
+  <path d="M110 545C135 425 215 370 300 370C385 370 465 425 490 545" fill="#0F172A" stroke="#2563EB" stroke-width="8"/>
+  <text x="300" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="88" font-weight="700" fill="#F8FAFC">CE</text>
+</svg>
