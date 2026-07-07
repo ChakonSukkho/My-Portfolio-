@@ -105,7 +105,8 @@ async function createBadgeTexture() {
   ctx.font = '700 30px Inter, Arial, sans-serif';
   ctx.fillText('AVAILABLE', 765, 126);
 
-  const photo = await loadImage('/profile.jpeg', '/profile-placeholder.svg');
+  const assetBaseUrl = import.meta.env.BASE_URL;
+  const photo = await loadImage(`${assetBaseUrl}profile.jpeg`, `${assetBaseUrl}profile-placeholder.svg`);
   const photoX = CARD_WIDTH / 2 - 190;
   const photoY = 220;
   const photoSize = 380;

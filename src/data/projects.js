@@ -1,11 +1,13 @@
 export const projectFilters = ['All', 'Full Stack', 'Dashboard', 'Automation', 'CMS / SEO'];
 
+const publicAsset = (path) => `${import.meta.env.BASE_URL}${path}`;
+
 export const projects = [
   {
     id: 1,
     title: 'ePengakap Daerah — District Scout Management System',
     category: 'Full Stack',
-    image: '/project-placeholder.svg',
+    image: publicAsset('project-placeholder.svg'),
     tech: ['React', 'Vite', 'TypeScript', 'Bootstrap', 'Supabase'],
     description:
       'A district-level scout management system covering users, groups, members, activities, reporting, settings, and audit logs.',
@@ -36,7 +38,7 @@ export const projects = [
     id: 2,
     title: 'NetWatch — Agentless Network Monitoring Dashboard',
     category: 'Dashboard',
-    image: '/project-placeholder.svg',
+    image: publicAsset('project-placeholder.svg'),
     tech: ['React', 'Flask', 'PostgreSQL', 'Python', 'JWT'],
     description:
       'A network-monitoring prototype for device discovery, asset inventory, scan history, security alerts, and risk indicators.',
@@ -69,7 +71,7 @@ export const projects = [
     id: 3,
     title: 'Dynamics 365 / Power Automate Renewal Workflow',
     category: 'Automation',
-    image: '/project-placeholder.svg',
+    image: publicAsset('project-placeholder.svg'),
     tech: ['Power Automate', 'Dynamics 365 Field Service', 'Dataverse', 'Excel'],
     description:
       'A renewal-tracking workflow to support license renewal monitoring, reminders, and reporting.',
@@ -100,7 +102,7 @@ export const projects = [
     id: 4,
     title: 'Inventa — Student Management System',
     category: 'Full Stack',
-    image: '/project-placeholder.svg',
+    image: publicAsset('project-placeholder.svg'),
     tech: ['PHP', 'MySQL', 'Azure App Service', 'cPanel'],
     description:
       'A PHP and MySQL-based student management system supported through debugging, deployment, and system fixes.',
@@ -131,7 +133,7 @@ export const projects = [
     id: 5,
     title: 'WordPress Website & SEO Improvement',
     category: 'CMS / SEO',
-    image: '/project-placeholder.svg',
+    image: publicAsset('project-placeholder.svg'),
     tech: ['WordPress', 'AIOSEO', 'Google Analytics', 'SEMrush'],
     description:
       'Website maintenance and SEO improvement work for content, metadata, page structure, headings, and internal links.',

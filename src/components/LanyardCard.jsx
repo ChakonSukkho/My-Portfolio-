@@ -3,7 +3,7 @@ import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { FaCode, FaMapMarkerAlt } from 'react-icons/fa';
 
 function LanyardCard() {
-  const [photoSrc, setPhotoSrc] = useState('/profile.jpeg');
+  const [photoSrc, setPhotoSrc] = useState(`${import.meta.env.BASE_URL}profile.jpeg`);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const smoothX = useSpring(mouseX, { stiffness: 120, damping: 18 });
@@ -61,6 +61,7 @@ function LanyardCard() {
                   src={photoSrc}
                   alt="Profile placeholder for CHAKON A/L EH CHEH"
                   className="h-full w-full object-cover"
+                  onError={() => setPhotoSrc(`${import.meta.env.BASE_URL}profile-placeholder.svg`)}
                 />
               </div>
 

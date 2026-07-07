@@ -28,7 +28,7 @@ function Hero() {
             <a href="#projects" className="primary-button">
               View Projects <FaArrowRight />
             </a>
-            <a href="/chakon-resume.pdf" className="secondary-button" download>
+            <a href={`${import.meta.env.BASE_URL}chakon-resume.pdf`} className="secondary-button" download>
               Download Resume <FaDownload />
             </a>
             <a href="#contact" className="secondary-button">
