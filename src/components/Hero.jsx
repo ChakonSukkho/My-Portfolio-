@@ -1,6 +1,9 @@
+import { lazy, Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { FaArrowRight, FaDownload, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
-import ThreeLanyardCard from './ThreeLanyardCard.jsx';
+import LanyardCard from './LanyardCard.jsx';
+
+const ThreeLanyardCard = lazy(() => import('./ThreeLanyardCard.jsx'));
 
 function Hero() {
   return (
@@ -60,7 +63,9 @@ function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.75, delay: 0.15 }}
         >
-          <ThreeLanyardCard />
+          <Suspense fallback={<LanyardCard />}>
+            <ThreeLanyardCard />
+          </Suspense>
         </motion.div>
       </div>
     </section>

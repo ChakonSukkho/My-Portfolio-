@@ -177,7 +177,7 @@ async function createBadgeTexture() {
 
   ctx.fillStyle = 'rgba(148, 163, 184, 0.85)';
   ctx.font = '700 24px Inter, Arial, sans-serif';
-  ctx.fillText('PORTFOLIO-2026 • REACT • TAILWIND • THREE.JS', 76, 1380);
+  ctx.fillText('PORTFOLIO-2026 - REACT - TAILWIND - THREE.JS', 76, 1380);
 
   const texture = new THREE.CanvasTexture(canvas);
   texture.colorSpace = THREE.SRGBColorSpace;
