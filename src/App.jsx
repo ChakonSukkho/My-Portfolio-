@@ -8,12 +8,14 @@ import Education from './components/Education.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 import WhatsAppButton from './components/WhatsAppButton.jsx';
+import MouseGlow from './components/MouseGlow.jsx';
 
 function App() {
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-darkBg text-slate-100">
       <div className="pointer-events-none fixed inset-0 bg-grid opacity-45" aria-hidden="true" />
       <div className="pointer-events-none fixed left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-cyan-400/10 blur-3xl" aria-hidden="true" />
+      <MouseGlow />
 
       <Navbar />
       <main className="relative z-10">
