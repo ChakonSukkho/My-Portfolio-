@@ -42,7 +42,7 @@ function CaseStudyModal({ project, onClose }) {
     <AnimatePresence>
       {project && (
         <motion.div
-          className="fixed inset-0 z-[80] flex items-start justify-center overflow-y-auto bg-slate-950/90 px-4 py-6 backdrop-blur-md sm:items-center"
+          className="case-study-backdrop fixed inset-0 z-[80] flex items-start justify-center overflow-y-auto bg-slate-950/90 px-4 py-6 backdrop-blur-md sm:items-center"
           role="dialog"
           aria-modal="true"
           aria-labelledby="case-study-title"
