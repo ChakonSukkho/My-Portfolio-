@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { motion } from 'framer-motion';
-import { FaArrowRight, FaDownload, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaArrowRight, FaDownload, FaEnvelope, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import LanyardCard from './LanyardCard.jsx';
 
 const ThreeLanyardCard = lazy(() => import('./ThreeLanyardCard.jsx'));
@@ -54,6 +54,15 @@ function Hero() {
               className="grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-white/5 text-xl text-slate-200 transition hover:-translate-y-1 hover:border-cyan-300/50 hover:text-cyan-200"
             >
               <FaLinkedin />
+            </a>
+            <a
+              href="https://www.instagram.com/chakonsukkho/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Open Chakon Instagram profile"
+              className="grid h-12 w-12 place-items-center rounded-2xl border border-pink-400/25 bg-pink-500/10 text-xl text-pink-300 transition hover:-translate-y-1 hover:border-pink-400/60 hover:bg-pink-500/15 hover:shadow-[0_0_30px_rgba(236,72,153,0.2)]"
+            >
+              <FaInstagram />
             </a>
           </div>
         </motion.div>

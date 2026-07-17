@@ -24,7 +24,45 @@ body {
     radial-gradient(circle at 50% 85%, rgba(59, 130, 246, 0.12), transparent 35%),
     #020617;
   color: #f8fafc;
+  transition: background-color 300ms ease, color 300ms ease;
 }
+
+html.light { color-scheme: light; }
+
+html.light body {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(37, 99, 235, 0.1), transparent 30%),
+    radial-gradient(circle at 85% 15%, rgba(6, 182, 212, 0.08), transparent 32%),
+    #f8fafc;
+  color: #0f172a;
+}
+
+html.light .bg-darkBg { background-color: #f8fafc !important; }
+html.light .bg-slate-950\/80,
+html.light .bg-slate-950\/90 { background-color: rgba(248, 250, 252, 0.9) !important; }
+html.light .bg-slate-900\/95 { background-color: rgba(255, 255, 255, 0.96) !important; }
+html.light .bg-slate-900\/55,
+html.light .bg-slate-900\/45 { background-color: rgba(255, 255, 255, 0.78) !important; }
+html.light .bg-slate-950\/35 { background-color: rgba(241, 245, 249, 0.8) !important; }
+html.light .text-white,
+html.light .text-slate-100,
+html.light .text-slate-200 { color: #0f172a !important; }
+html.light .text-slate-300 { color: #334155 !important; }
+html.light .text-slate-400,
+html.light .text-slate-500 { color: #64748b !important; }
+html.light .text-cyan-100,
+html.light .text-cyan-200 { color: #0369a1 !important; }
+html.light .border-white\/10,
+html.light .border-white\/15 { border-color: rgba(15, 23, 42, 0.13) !important; }
+html.light .bg-white\/5,
+html.light .bg-white\/\[0\.04\] { background-color: rgba(255, 255, 255, 0.72) !important; }
+html.light .glass-card {
+  border-color: rgba(15, 23, 42, 0.12);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.1);
+}
+html.light .gradient-text { background-image: linear-gradient(to right, #0f172a, #2563eb, #0891b2); }
+html.light .bg-grid { opacity: 0.25; }
 
 @layer components {
   .section-container {

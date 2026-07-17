@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaMoon, FaSun, FaTimes } from 'react-icons/fa';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -14,6 +14,7 @@ const navLinks = [
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isDark, setIsDark] = useState(() => !document.documentElement.classList.contains('light'));
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -24,6 +25,16 @@ function Navbar() {
   }, []);
 
   const closeMenu = () => setIsOpen(false);
+
+  const toggleTheme = () => {
+    setIsDark((current) => {
+      const nextThemeIsDark = !current;
+      document.documentElement.classList.toggle('light', !nextThemeIsDark);
+      document.documentElement.classList.toggle('dark', nextThemeIsDark);
+      localStorage.setItem('portfolio-theme', nextThemeIsDark ? 'dark' : 'light');
+      return nextThemeIsDark;
+    });
+  };
 
   return (
     <header
@@ -65,24 +76,44 @@ function Navbar() {
           ))}
         </div>
 
-        {/* Hire Me Button */}
-        <a
-          href="#contact"
-          className="hidden rounded-full border border-cyan-300/30 px-7 py-3 text-base font-bold text-cyan-100 transition hover:bg-cyan-300/10 hover:shadow-glow lg:inline-flex"
-        >
-          Hire Me
-        </a>
+        <div className="hidden items-center gap-3 lg:flex">
+          <a
+            href="#contact"
+            className="rounded-full border border-cyan-300/30 px-7 py-3 text-base font-bold text-cyan-100 transition hover:bg-cyan-300/10 hover:shadow-glow"
+          >
+            Hire Me
+          </a>
+          <button
+            type="button"
+            onClick={toggleTheme}
+            className="grid h-12 w-12 place-items-center rounded-full border border-white/15 bg-white/5 text-lg text-slate-200 transition hover:border-cyan-300/50 hover:text-cyan-200 focus:outline-none focus:ring-2 focus:ring-cyan-300"
+            aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+            title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+          >
+            {isDark ? <FaSun aria-hidden="true" /> : <FaMoon aria-hidden="true" />}
+          </button>
+        </div>
 
         {/* Mobile Button */}
-        <button
-          type="button"
-          className="grid h-14 w-14 place-items-center rounded-2xl border border-white/10 bg-white/5 text-xl text-white lg:hidden"
-          aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
-          aria-expanded={isOpen}
-          onClick={() => setIsOpen((current) => !current)}
-        >
-          {isOpen ? <FaTimes /> : <FaBars />}
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <button
+            type="button"
+            onClick={toggleTheme}
+            className="grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-white/5 text-lg text-slate-100"
+            aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+          >
+            {isDark ? <FaSun aria-hidden="true" /> : <FaMoon aria-hidden="true" />}
+          </button>
+          <button
+            type="button"
+            className="grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-white/5 text-xl text-white"
+            aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={isOpen}
+            onClick={() => setIsOpen((current) => !current)}
+          >
+            {isOpen ? <FaTimes /> : <FaBars />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Menu */}
