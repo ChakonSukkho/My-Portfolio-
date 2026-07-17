@@ -104,6 +104,12 @@ html.light .badge-drag-hint {
   color: #f8fafc !important;
   box-shadow: 0 10px 28px rgba(15, 23, 42, 0.2);
 }
+html.light button[aria-label='Scroll back to top'] {
+  border-color: rgba(37, 99, 235, 0.28) !important;
+  background: rgba(255, 255, 255, 0.94) !important;
+  color: #0369a1 !important;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.14);
+}
 
 @layer components {
   .section-container {

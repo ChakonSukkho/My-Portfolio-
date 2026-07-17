@@ -9,6 +9,7 @@ import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 import WhatsAppButton from './components/WhatsAppButton.jsx';
 import MouseGlow from './components/MouseGlow.jsx';
+import ScrollToTopButton from './components/ScrollToTopButton.jsx';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <ScrollToTopButton />
       <WhatsAppButton />
     </div>
   );
