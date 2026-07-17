@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import SectionHeading from './SectionHeading.jsx';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { skillCategories } from '../data/skills.js';
 
 const categoryStyles = {
@@ -36,6 +37,10 @@ const categoryStyles = {
 };
 
 function Skills() {
+  const [activeCategory, setActiveCategory] = useState(skillCategories[0].title);
+  const selectedCategory = skillCategories.find((category) => category.title === activeCategory);
+  const styles = categoryStyles[selectedCategory.title];
+
   return (
     <section id="skills" className="section-container py-24">
       <SectionHeading
@@ -44,27 +49,52 @@ function Skills() {
         description="Technologies and tools I use to design, build, deploy, and support modern applications."
       />
 
-      <div className="space-y-14">
+      <div className="mb-9 flex flex-wrap justify-center gap-2" role="tablist" aria-label="Skill categories">
         {skillCategories.map((category) => {
-          const styles = categoryStyles[category.title];
-
+          const isActive = activeCategory === category.title;
           return (
-            <section key={category.title} aria-labelledby={`skills-${category.title.replaceAll(' ', '-').toLowerCase()}`}>
-              <div className="mb-6 flex items-end justify-between gap-5 border-b border-white/10 pb-4">
-                <div>
-                  <h3
-                    id={`skills-${category.title.replaceAll(' ', '-').toLowerCase()}`}
-                    className="text-xl font-black text-white sm:text-2xl"
-                  >
-                    {category.title}
-                  </h3>
-                  <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-400">{category.description}</p>
-                </div>
-                <span className={`mb-1 hidden h-2.5 w-2.5 shrink-0 rounded-full sm:block ${styles.dot}`} aria-hidden="true" />
-              </div>
+            <button
+              key={category.title}
+              type="button"
+              role="tab"
+              aria-selected={isActive}
+              onClick={() => setActiveCategory(category.title)}
+              className={`rounded-full border px-4 py-2 text-xs font-bold transition sm:px-5 sm:text-sm ${
+                isActive
+                  ? 'border-cyan-300/50 bg-cyan-300/15 text-cyan-100 shadow-glow'
+                  : 'border-white/10 bg-white/5 text-slate-400 hover:border-cyan-300/30 hover:text-cyan-200'
+              }`}
+            >
+              {category.title}
+            </button>
+          );
+        })}
+      </div>
 
-              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7">
-                {category.skills.map((skill, index) => {
+      <AnimatePresence mode="wait">
+        <motion.section
+          key={selectedCategory.title}
+          aria-labelledby={`skills-${selectedCategory.title.replaceAll(' ', '-').toLowerCase()}`}
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.25 }}
+        >
+          <div className="mb-6 flex items-end justify-between gap-5 border-b border-white/10 pb-4">
+            <div>
+              <h3
+                id={`skills-${selectedCategory.title.replaceAll(' ', '-').toLowerCase()}`}
+                className="text-xl font-black text-white sm:text-2xl"
+              >
+                {selectedCategory.title}
+              </h3>
+              <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-400">{selectedCategory.description}</p>
+            </div>
+            <span className={`mb-1 hidden h-2.5 w-2.5 shrink-0 rounded-full sm:block ${styles.dot}`} aria-hidden="true" />
+          </div>
+
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7">
+                {selectedCategory.skills.map((skill, index) => {
                   const Icon = skill.icon;
 
                   return (
@@ -82,17 +112,15 @@ function Skills() {
                       </span>
                       <h4 className="mt-4 text-sm font-bold text-slate-100">{skill.name}</h4>
                       <p className="mt-2 text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">
-                        {category.title}
+                        {selectedCategory.title}
                       </p>
                       <span className={`mt-3 h-1.5 w-1.5 rounded-full ${styles.dot}`} aria-hidden="true" />
                     </motion.article>
                   );
                 })}
-              </div>
-            </section>
-          );
-        })}
-      </div>
+          </div>
+        </motion.section>
+      </AnimatePresence>
     </section>
   );
 }
