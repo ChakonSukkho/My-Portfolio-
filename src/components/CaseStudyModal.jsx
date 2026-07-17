@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { FaTimes } from 'react-icons/fa';
 
@@ -11,11 +12,28 @@ const rows = [
 ];
 
 function CaseStudyModal({ project, onClose }) {
+  useEffect(() => {
+    if (!project) return undefined;
+
+    const previousOverflow = document.body.style.overflow;
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') onClose();
+    };
+
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [project, onClose]);
+
   return (
     <AnimatePresence>
       {project && (
         <motion.div
-          className="fixed inset-0 z-[80] grid place-items-center bg-slate-950/80 px-4 py-6 backdrop-blur-md"
+          className="fixed inset-0 z-[80] flex items-start justify-center overflow-y-auto bg-slate-950/90 px-4 py-6 backdrop-blur-md sm:items-center"
           role="dialog"
           aria-modal="true"
           aria-labelledby="case-study-title"
@@ -25,17 +43,17 @@ function CaseStudyModal({ project, onClose }) {
           onClick={onClose}
         >
           <motion.article
-            className="glass-card max-h-[88vh] w-full max-w-4xl overflow-y-auto rounded-[2rem] p-6 sm:p-8"
+            className="glass-card my-auto max-h-[calc(100dvh-3rem)] w-full max-w-4xl overflow-y-auto rounded-[2rem] p-5 sm:p-8"
             initial={{ opacity: 0, y: 30, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.96 }}
             transition={{ duration: 0.25 }}
             onClick={(event) => event.stopPropagation()}
           >
-            <div className="mb-6 flex items-start justify-between gap-5">
-              <div>
+            <div className="sticky -top-5 z-10 mb-6 flex items-start justify-between gap-4 border-b border-white/10 bg-slate-900/95 pb-5 pt-1 backdrop-blur-xl sm:-top-8 sm:pt-0">
+              <div className="min-w-0 pr-2">
                 <p className="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-200">Case Study</p>
-                <h3 id="case-study-title" className="mt-2 text-2xl font-black text-white sm:text-3xl">
+                <h3 id="case-study-title" className="mt-2 break-words text-xl font-black leading-tight text-white sm:text-3xl">
                   {project.title}
                 </h3>
               </div>
