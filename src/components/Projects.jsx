@@ -18,8 +18,8 @@ function Projects() {
     <section id="projects" className="section-container py-24">
       <SectionHeading
         eyebrow="Projects"
-        title="Selected software, dashboard, automation, and CMS work."
-        description="Each project highlights the problem, solution, tools, key features, my role, and outcome for recruiter-friendly review."
+        title="Selected landing pages, software, dashboards, automation, and CMS work."
+        description="Explore responsive landing pages and technical projects, each with its problem, solution, tools, key features, my role, and outcome."
       />
 
       <div className="mb-10 flex flex-wrap justify-center gap-3" role="tablist" aria-label="Project filters">

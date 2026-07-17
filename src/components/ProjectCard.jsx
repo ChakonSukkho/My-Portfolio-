@@ -45,7 +45,13 @@ function ProjectCard({ project, index, onOpenCaseStudy }) {
         </ul>
 
         <div className="mt-auto flex flex-wrap gap-3 pt-6">
-          <a href={project.demoUrl} className="secondary-button px-4 py-2 text-xs" aria-label={`View demo for ${project.title}`}>
+          <a
+            href={project.demoUrl}
+            target={project.demoUrl === '#' ? undefined : '_blank'}
+            rel={project.demoUrl === '#' ? undefined : 'noreferrer'}
+            className="secondary-button px-4 py-2 text-xs"
+            aria-label={`View demo for ${project.title}`}
+          >
             View Demo <FaExternalLinkAlt />
           </a>
           <button

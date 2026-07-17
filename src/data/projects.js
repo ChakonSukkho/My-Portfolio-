@@ -1,8 +1,101 @@
-export const projectFilters = ['All', 'Full Stack', 'Dashboard', 'Automation', 'CMS / SEO'];
+export const projectFilters = ['All', 'Landing Pages', 'Full Stack', 'Dashboard', 'Automation', 'CMS / SEO'];
 
 const publicAsset = (path) => `${import.meta.env.BASE_URL}${path}`;
 
 export const projects = [
+  {
+    id: 6,
+    title: 'Food Restaurant Landing Page',
+    category: 'Landing Pages',
+    image: publicAsset('project-placeholder.svg'),
+    tech: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
+    description:
+      'A modern food landing page designed to introduce a restaurant, highlight popular dishes, and encourage visitors to order or book a table.',
+    features: [
+      'Appetizing hero section',
+      'Featured food menu',
+      'Clear order and reservation actions',
+      'Mobile-friendly responsive layout',
+    ],
+    demoUrl: 'https://foodburgerlandingpage.netlify.app/',
+    caseStudyUrl: '#',
+    githubUrl: 'https://github.com/ChakonSukkho',
+    caseStudy: {
+      problem:
+        'A restaurant needs to make a strong first impression online while helping customers quickly discover its food and take action.',
+      solution:
+        'Created a focused one-page experience with bold food presentation, simple content sections, and prominent ordering and reservation calls to action.',
+      techStack: 'HTML, CSS, JavaScript, responsive web design',
+      features:
+        'Hero section, featured dishes, menu highlights, promotional content, calls to action, and a responsive mobile layout.',
+      role:
+        'Designed and developed the landing page, structured the content, styled the responsive interface, and refined the user experience.',
+      outcome:
+        'Produced a clean restaurant landing page that clearly presents the brand and guides visitors toward ordering food or making a reservation.',
+    },
+  },
+  {
+    id: 7,
+    title: 'Barber Shop Landing Page',
+    category: 'Landing Pages',
+    image: publicAsset('project-placeholder.svg'),
+    tech: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
+    description:
+      'A polished barber shop landing page that presents services, builds trust, and makes it easy for customers to book an appointment.',
+    features: [
+      'Strong service-focused hero section',
+      'Barber services and pricing',
+      'Appointment booking call to action',
+      'Responsive layout for every screen',
+    ],
+    demoUrl: 'https://barbershoplandpage.netlify.app/',
+    caseStudyUrl: '#',
+    githubUrl: 'https://github.com/ChakonSukkho',
+    caseStudy: {
+      problem:
+        'A local barber shop needs a professional web presence that communicates its style, services, and booking options at a glance.',
+      solution:
+        'Built a concise landing page with a confident visual hierarchy, service information, trust-building content, and visible appointment actions.',
+      techStack: 'HTML, CSS, JavaScript, responsive web design',
+      features:
+        'Hero section, service list, pricing, barber shop highlights, booking calls to action, and mobile-friendly navigation.',
+      role:
+        'Planned the page structure, developed the interface, created the responsive styling, and improved the booking journey.',
+      outcome:
+        'Delivered a professional landing page that helps the barber shop showcase its services and turn visitors into appointment enquiries.',
+    },
+  },
+  {
+    id: 8,
+    title: 'Simple SaaS Landing Page',
+    category: 'Landing Pages',
+    image: publicAsset('project-placeholder.svg'),
+    tech: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
+    description:
+      'A clean SaaS product landing page that explains the product value, introduces key features, and guides users toward getting started.',
+    features: [
+      'Product-focused hero section',
+      'Feature and benefit highlights',
+      'Simple pricing presentation',
+      'Conversion-focused calls to action',
+    ],
+    demoUrl: 'https://saastasklandingpage.netlify.app/',
+    caseStudyUrl: '#',
+    githubUrl: 'https://github.com/ChakonSukkho',
+    caseStudy: {
+      problem:
+        'A new software product needs a simple way to communicate its value and move potential customers from discovery to sign-up.',
+      solution:
+        'Designed a clear, conversion-focused page with concise product messaging, feature explanations, pricing content, and repeated calls to action.',
+      techStack: 'HTML, CSS, JavaScript, responsive web design',
+      features:
+        'Hero section, product benefits, feature cards, pricing overview, testimonials, calls to action, and responsive layouts.',
+      role:
+        'Designed the visual structure, developed the responsive page, organized the product content, and refined the conversion flow.',
+      outcome:
+        'Created an approachable SaaS landing page that makes the product easier to understand and gives visitors a clear next step.',
+    },
+  },
   {
     id: 1,
     title: 'ePengakap Daerah — District Scout Management System',
