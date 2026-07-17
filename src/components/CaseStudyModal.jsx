@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { FaTimes } from 'react-icons/fa';
 
@@ -29,7 +30,7 @@ function CaseStudyModal({ project, onClose }) {
     };
   }, [project, onClose]);
 
-  return (
+  return createPortal(
     <AnimatePresence>
       {project && (
         <motion.div
@@ -78,7 +79,8 @@ function CaseStudyModal({ project, onClose }) {
           </motion.article>
         </motion.div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body,
   );
 }
 
