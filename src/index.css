@@ -103,12 +103,12 @@ html.light .bg-grid { opacity: 0.25; }
   left: 0;
   top: 0;
   z-index: 1;
-  width: min(44rem, 75vw);
-  height: min(44rem, 75vw);
+  width: min(24rem, 42vw);
+  height: min(24rem, 42vw);
   border-radius: 9999px;
   opacity: 0;
-  background: radial-gradient(circle, rgba(6, 182, 212, 0.16) 0%, rgba(37, 99, 235, 0.08) 38%, transparent 70%);
-  filter: blur(18px);
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.14) 0%, rgba(37, 99, 235, 0.07) 38%, transparent 70%);
+  filter: blur(12px);
   will-change: transform, opacity;
   transition: opacity 400ms ease;
 }
