@@ -427,7 +427,7 @@ function ThreeLanyardCard() {
       <div className="absolute inset-10 rounded-full bg-cyan-400/20 blur-3xl" aria-hidden="true" />
       <div className="absolute bottom-16 left-1/2 h-20 w-2/3 -translate-x-1/2 rounded-full bg-blue-500/15 blur-2xl" aria-hidden="true" />
       <div ref={mountRef} className="relative z-10 h-full w-full" />
-      <p className="pointer-events-none absolute bottom-3 left-1/2 z-20 -translate-x-1/2 rounded-full border border-white/10 bg-slate-950/60 px-4 py-2 text-center text-xs font-semibold text-slate-400 backdrop-blur-md">
+      <p className="badge-drag-hint pointer-events-none absolute bottom-3 left-1/2 z-20 -translate-x-1/2 rounded-full border border-white/10 bg-slate-950/60 px-4 py-2 text-center text-xs font-semibold text-slate-400 backdrop-blur-md">
         Move or drag the badge
       </p>
     </div>
