@@ -107,7 +107,15 @@ function Skills() {
                       transition={{ duration: 0.4, delay: index * 0.035 }}
                       tabIndex="0"
                     >
-                      <span className={`grid h-14 w-14 place-items-center rounded-2xl border text-3xl transition duration-300 group-hover:scale-110 ${styles.icon}`}>
+                      <span
+                        className="grid h-14 w-14 place-items-center rounded-2xl border text-3xl transition duration-300 group-hover:scale-110"
+                        style={{
+                          color: skill.color,
+                          borderColor: `color-mix(in srgb, ${skill.color} 35%, transparent)`,
+                          backgroundColor: `color-mix(in srgb, ${skill.color} 12%, transparent)`,
+                          boxShadow: `0 0 22px color-mix(in srgb, ${skill.color} 12%, transparent)`,
+                        }}
+                      >
                         <Icon aria-hidden="true" />
                       </span>
                       <h4 className="mt-4 text-sm font-bold text-slate-100">{skill.name}</h4>
