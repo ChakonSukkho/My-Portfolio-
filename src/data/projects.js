@@ -7,7 +7,7 @@ export const projects = [
     id: 6,
     title: 'Food Restaurant Landing Page',
     category: 'Landing Pages',
-    image: publicAsset('project-placeholder.svg'),
+    image: publicAsset('food-landing-page.png'),
     tech: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
     description:
       'A modern food landing page designed to introduce a restaurant, highlight popular dishes, and encourage visitors to order or book a table.',
@@ -38,7 +38,7 @@ export const projects = [
     id: 7,
     title: 'Barber Shop Landing Page',
     category: 'Landing Pages',
-    image: publicAsset('project-placeholder.svg'),
+    image: publicAsset('barber-shop-landing-page.png'),
     tech: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
     description:
       'A polished barber shop landing page that presents services, builds trust, and makes it easy for customers to book an appointment.',
@@ -69,7 +69,7 @@ export const projects = [
     id: 8,
     title: 'Simple SaaS Landing Page',
     category: 'Landing Pages',
-    image: publicAsset('project-placeholder.svg'),
+    image: publicAsset('saas-landing-page.png'),
     tech: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
     description:
       'A clean SaaS product landing page that explains the product value, introduces key features, and guides users toward getting started.',
@@ -100,7 +100,7 @@ export const projects = [
     id: 1,
     title: 'ePengakap Daerah — District Scout Management System',
     category: 'Full Stack',
-    image: publicAsset('project-placeholder.svg'),
+    image: publicAsset('epengakap-dashboard.png'),
     tech: ['React', 'Vite', 'TypeScript', 'Bootstrap', 'Supabase'],
     description:
       'A district-level scout management system covering users, groups, members, activities, reporting, settings, and audit logs.',
@@ -110,7 +110,7 @@ export const projects = [
       'Member import, search, pagination, validation, and reporting',
       'Supabase PostgreSQL integration',
     ],
-    demoUrl: '#',
+    demoUrl: 'https://e-pengakap-daerah-bintara.vercel.app/',
     caseStudyUrl: '#',
     githubUrl: 'https://github.com/ChakonSukkho',
     caseStudy: {

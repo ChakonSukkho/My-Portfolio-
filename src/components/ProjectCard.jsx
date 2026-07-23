@@ -14,7 +14,7 @@ function ProjectCard({ project, index, onOpenCaseStudy }) {
       <div className="relative overflow-hidden">
         <img
           src={project.image}
-          alt={`${project.title} mockup placeholder`}
+          alt={`${project.title} homepage preview`}
           className="h-56 w-full object-cover opacity-90 transition duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/15 to-transparent" aria-hidden="true" />
