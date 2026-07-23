@@ -153,7 +153,7 @@ async function createBadgeTexture() {
   ctx.stroke();
   ctx.fillStyle = '#cffafe';
   ctx.font = '800 36px Inter, Arial, sans-serif';
-  ctx.fillText('Software Engineering | IT Support', 126, 970);
+  ctx.fillText('Junior Software Engineer', 126, 970);
 
   ctx.fillStyle = 'rgba(15, 23, 42, 0.68)';
   roundedRect(ctx, 76, 1060, 408, 150, 34);

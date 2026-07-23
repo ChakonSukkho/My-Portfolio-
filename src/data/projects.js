@@ -1,4 +1,12 @@
-export const projectFilters = ['All', 'Landing Pages', 'Full Stack', 'Dashboard', 'Automation', 'CMS / SEO'];
+export const projectFilters = [
+  'All',
+  'Landing Pages',
+  'Software Engineering',
+  'Full Stack',
+  'Dashboard',
+  'Automation',
+  'CMS / SEO',
+];
 
 const publicAsset = (path) => `${import.meta.env.BASE_URL}${path}`;
 
@@ -193,9 +201,9 @@ export const projects = [
   },
   {
     id: 4,
-    title: 'Inventa — Student Management System',
-    category: 'Full Stack',
-    image: publicAsset('project-placeholder.svg'),
+    title: 'Inventa — Student Talent Management System',
+    category: 'Software Engineering',
+    image: publicAsset('inventa-student-management.png'),
     tech: ['PHP', 'MySQL', 'Azure App Service', 'cPanel'],
     description:
       'A PHP and MySQL-based student management system supported through debugging, deployment, and system fixes.',
@@ -205,7 +213,7 @@ export const projects = [
       'SSL/HTTPS and redirect setup',
       'Azure deployment support',
     ],
-    demoUrl: '#',
+    demoUrl: 'https://inventa.chakon.my/',
     caseStudyUrl: '#',
     githubUrl: 'https://github.com/ChakonSukkho',
     caseStudy: {

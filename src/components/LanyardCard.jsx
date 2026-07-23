@@ -69,7 +69,7 @@ function LanyardCard() {
                 <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-400">Name</p>
                 <h3 className="mt-1 text-2xl font-black leading-tight text-white">CHAKON A/L EH CHEH</h3>
                 <p className="mt-3 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm font-semibold text-cyan-100">
-                  <FaCode className="text-cyan-300" /> Software Engineering | IT Support
+                  <FaCode className="text-cyan-300" /> Junior Software Engineer
                 </p>
               </div>
             </div>

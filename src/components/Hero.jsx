@@ -18,10 +18,10 @@ function Hero() {
           <h1 className="max-w-4xl text-4xl font-black leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl">
             Hi, I am <span className="gradient-text">CHAKON A/L EH CHEH</span>
           </h1>
-          <p className="mt-5 text-xl font-semibold text-cyan-100 sm:text-2xl">Software Engineering | IT Support</p>
+          <p className="mt-5 text-xl font-semibold text-cyan-100 sm:text-2xl">Junior Software Engineer</p>
           <p className="mt-6 max-w-2xl text-base leading-8 text-slate-400 sm:text-lg">
-            Junior Software Engineering and Application Support candidate with hands-on experience developing,
-            testing, deploying, and troubleshooting business web applications.
+            Junior software engineer with hands-on experience designing, developing, testing, deploying, and
+            troubleshooting responsive business web applications.
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
