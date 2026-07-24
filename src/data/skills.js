@@ -40,7 +40,7 @@ export const skillCategories = [
     title: 'Frontend',
     description: 'Modern user interfaces, responsive layouts, and clean component-based development.',
     skills: [
-      { name: 'React', icon: FaReact, color: '#61DAFB' },
+      { name: 'React', icon: FaReact, color: '#61DAFB' }, 
       { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
       { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
       { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4' },
